@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pssarhali-peer-portal": {
+      "hosting": {
+        "session": [
+          "pssarhali-peer-portal"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pssarhali-peer-portal"
+  }
+}
