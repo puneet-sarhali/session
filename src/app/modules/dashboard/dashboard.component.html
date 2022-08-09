@@ -1,0 +1,14 @@
+<!--<button (click)="signOut()">Sign Out</button>-->
+<div *ngIf="user" class="flex flex-col align-middle items-center m-4">
+  <div class="avatar online">
+    <div class="w-28 rounded">
+      <img src="{{ user.photoURL }}" />
+    </div>
+  </div>
+
+  <h1 class="text-xl font-bold m-4">{{ user.displayName | uppercase }}</h1>
+
+  <div *ngIf="presence$ | async as presence">
+    <pre> {{ presence.snapshot.val().status }} </pre>
+  </div>
+</div>

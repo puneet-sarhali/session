@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from "../../core/auth/auth.service";
 
 @Component({
   selector: 'app-sign-in',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AuthService) { }
+
+  onGoogleClick(){
+    this.auth.signInWithGoogle();
+  }
 
   ngOnInit(): void {
   }
